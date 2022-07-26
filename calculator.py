@@ -1,27 +1,32 @@
-def add(e,f):
-    return int(e)+int(f)
-def sub(e,f):
-    return int(e)-int(f)
-def mul(e,f):
-    return int(e)*int(f)
-def div(e,f):
-    return float(int(e)/int(f))
+def add(a,b):
+    print(a+b)
+def sub(a,b):
+    print(a-b)
+def mult(a,b):
+    print(a*b)
+def div(a,b):
+    print(a/b)
+def square(a,b):
+    print(a**b)
+def modulus(a,b):
+    print(a%b)
 
+x = int(input("Enter 1st number: \n"))
+y = int(input("Enter 2nd number: \n"))
 
-num1 = input("Enter 1st number: ")
-num2 = input("Enter 2nd number: ")
-
-if int(num1) and int(num2):
-    c = input("Choose =>  + , - , * , / :")
-    if c =='+':
-        print(add(num1,num2))
-    elif c == '-':
-        print(sub(num1,num2))
-    elif c == '*':
-        print(mul(num1,num2))
-    elif c == '/':
-        print(div(num1,num2))
-    else:
-        print("Mistake!!!!!!!")
+choice = input("Enter your choice(+,-,*,/,**,%): ")
+if choice in ('+','-','*','/','**','%'):
+    if choice == '+':
+        add(x,y)
+    elif choice == '-':
+        sub(x,y)
+    elif choice == '*':
+        mult(x,y)
+    elif choice == '/':
+        div(x,y)
+    elif choice == '**':
+        square(x,y)
+    elif choice == '%':
+        modulus(x,y)    
 else:
-    print("Your input is not integer")
+    print("Error wrong input given!! ")
